@@ -2,12 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import ProductShowPage from './components/ProductShowPage';
+import WithPage from './components/WithPage';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductShowPage />
+    <WithPage>
+      <WithPage>
+        <ProductShowPage />
+        <WithPage>
+          <ProductShowPage/>
+        </WithPage>
+      </WithPage>
+      <ProductShowPage />
+    </WithPage>
   </React.StrictMode>,
   document.getElementById('root')
 );

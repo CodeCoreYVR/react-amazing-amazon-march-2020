@@ -6,7 +6,7 @@ import ReviewList from '../ReviewList';
 function ProductShowPage() {
   const { id, title, description, created_at, seller, reviews } = productData
   return (
-    <main className='page'>
+    <>
       <ProductDetails 
         id={id}
         title={title}
@@ -15,7 +15,7 @@ function ProductShowPage() {
         seller={seller}
       />
       <ReviewList reviews={reviews} />
-    </main>
+    </>
   )
 }
 
