@@ -8,10 +8,20 @@ class ProductIndexPage extends Component {
     this.state = {
       products: productsData
     }
-    this.deleteProduct = this.deleteProduct.bind(this);
+    // this.deleteProduct = this.deleteProduct.bind(this);
   }
 
-  deleteProduct(id) {
+  // deleteProduct(id) {
+  //   this.setState((state) => {
+  //     return {
+  //       products: state.products.filter((product) => {
+  //         return product.id !== id;
+  //       })
+  //     }
+  //   })
+  // }
+
+  deleteProduct = (id) => {
     this.setState((state) => {
       return {
         products: state.products.filter((product) => {
