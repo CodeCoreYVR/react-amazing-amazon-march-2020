@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ProductIndexPage from '../ProductIndexPage';
 import ProductNewPage from '../ProductNewPage';
 import SignInPage from '../SignInPage';
+import Navbar from '../Navbar';
 
 class App extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class App extends Component {
     return(
       <div>
         <BrowserRouter>
+          <Navbar currentUser={this.state.currentUser}/>
           <Switch>
             <Route path='/products' exact component={ProductIndexPage}/>
             <Route path='/products/new' component={ProductNewPage}/>
